@@ -146,6 +146,22 @@ When you see it start like in the photo
 
 - If you're using the correct IP address but still have no connection, neither during testing nor anything else, check your firewall and enable port 8080 (or whichever port you change it to) for it to work.
 
+- If when you add arguments you get the following error:
+
+`python CastToMPV.py --app_args "--rotate-video=45"`
+
+**`CastToMPV.py: error: argument --app_args: expected one argument`**
+
+<img width="1128" height="74" alt="argument_error" src="https://github.com/user-attachments/assets/508d43e2-375a-4dc2-ad25-3219db1d819b" />
+
+📝 It could be `--app_args`, `---title`, or any other argument.
+
+Make sure to include an equals sign (`=`) between the spaces, like this:
+
+`python CastToMPV.py --app_args="--rotate-video=45"`
+
+<img width="484" height="194" alt="argument_error_fix" src="https://github.com/user-attachments/assets/d9d8bf01-98bd-426f-93a1-362caf5cfdba" />
+
 - If the app you're using only has Chromecast or Cast in general sharing capabilities, you'll have to figure out how to do it. In my case, the one I use only has Cast, but it's a fake Cast feature; it's through an app from the Play Store. So after opening it with that app, I can view it in a browser, share it, and use the app, and it works.
 
 If you encounter any problems or want to suggest an option, just create an issue and say what you want. I'll try to answer as soon as possible :D
